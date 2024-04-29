@@ -41,12 +41,12 @@ class AutoGPTBluesky(AutoGPTPluginTemplate):
 
         prompt.add_command(
             "post_to_bluesky", "Post to Bluesky", {
-                "text": "<text>"}, post_message
+                "text": "string"}, post_message
         )
         prompt.add_command(
             "get_bluesky_posts", "Get Blueskey Posts", {
-                "username": "<username>",
-                "number_of_posts": "<number_of_posts>"}, get_latest_posts)
+                "username": "string",
+                "number_of_posts": "integer"}, get_latest_posts)
 
         return prompt
 

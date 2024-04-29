@@ -37,7 +37,7 @@ class AutoGPTBingSearch(AutoGPTPluginTemplate):
             prompt.add_command(
                 "Bing Search",
                 "bing_search",
-                {"query": "<query>"},
+                {"query": "string"},
                 _bing_search,
             )
         else:

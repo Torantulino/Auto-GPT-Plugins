@@ -38,7 +38,7 @@ class AutoGPTSceneXPlugin(AutoGPTPluginTemplate):
                 self._description,
                 "describe_image",
                 {
-                    "image": "<image>",
+                    "image": "string",
                 },
                 self.scenexplain.describe_image,
             )
