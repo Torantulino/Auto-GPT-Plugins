@@ -35,7 +35,7 @@ class AutoGPTSerpApiSearch(AutoGPTPluginTemplate):
             prompt.add_command(
                 "SerpApi Search",
                 "serpapi_search",
-                {"query": "<query>"},
+                {"query": "string"},
                 serpapi_search,
             )
         else:

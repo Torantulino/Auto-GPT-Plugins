@@ -37,7 +37,7 @@ class AutoGPTBaiduSearch(AutoGPTPluginTemplate):
             prompt.add_command(
                 "Baidu Search",
                 "baidu_search",
-                {"query": "<query>"},
+                {"query": "string"},
                 _baidu_search,
             )
         else:

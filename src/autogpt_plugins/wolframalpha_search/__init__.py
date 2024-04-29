@@ -218,7 +218,7 @@ class AutoGPTWolframAlphaSearch(AutoGPTPluginTemplate):
             prompt.add_command(
                 "wolframalpha_search",
                 self._description,
-                {"query": "<query>"},
+                {"query": "string"},
                 _wolframalpha_search,
             )
         return prompt
