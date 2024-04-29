@@ -34,7 +34,7 @@ class AutoGPTNewsSearch(AutoGPTPluginTemplate):
             prompt.add_command(
                 "News Search",
                 "news_search",
-                {"query": "<query>"},
+                {"query": "string"},
                 self.news_search.news_everything_search,
             )
         else:

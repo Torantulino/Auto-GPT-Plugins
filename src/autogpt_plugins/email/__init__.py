@@ -36,27 +36,27 @@ class AutoGPTEmailPlugin(AutoGPTPluginTemplate):
                 "Read Emails",
                 "read_emails",
                 {
-                    "imap_folder": "<imap_folder>",
-                    "imap_search_command": "<imap_search_criteria_command>",
-                    "limit": "<email_count_return_limit>",
-                    "page": "<number_of_email_results_page>",
+                    "imap_folder": "string",
+                    "imap_search_command": "string",
+                    "limit": "string",
+                    "page": "string",
                 },
                 read_emails,
             )
             prompt.add_command(
                 "Send Email",
                 "send_email",
-                {"to": "<to>", "subject": "<subject>", "body": "<body>"},
+                {"to": "string", "subject": "string", "body": "string"},
                 send_email,
             )
             prompt.add_command(
                 "Send Email",
                 "send_email_with_attachment",
                 {
-                    "to": "<to>",
-                    "subject": "<subject>",
-                    "body": "<body>",
-                    "filename": "<attachment filename>",
+                    "to": "string",
+                    "subject": "string",
+                    "body": "string",
+                    "filename": "string",
                 },
                 send_email_with_attachment,
             )

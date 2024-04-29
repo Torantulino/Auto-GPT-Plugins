@@ -243,12 +243,12 @@ class AutoGPTTwitter(AutoGPTPluginTemplate):
             )
 
             prompt.add_command(
-                "post_tweet", "Post Tweet", {"tweet_text": "<tweet_text>"}, post_tweet
+                "post_tweet", "Post Tweet", {"tweet_text": "string"}, post_tweet
             )
             prompt.add_command(
                 "post_reply",
                 "Post Twitter Reply",
-                {"tweet_text": "<tweet_text>", "tweet_id": "<tweet_id>"},
+                {"tweet_text": "string", "tweet_id": "integer"},
                 post_reply,
             )
             prompt.add_command("get_mentions", "Get Twitter Mentions", {}, get_mentions)
@@ -256,8 +256,8 @@ class AutoGPTTwitter(AutoGPTPluginTemplate):
                 "search_twitter_user",
                 "Search Twitter",
                 {
-                    "target_user": "<target_user>",
-                    "number_of_tweets": "<number_of_tweets",
+                    "target_user": "string",
+                    "number_of_tweets": "integer",
                 },
                 search_twitter_user,
             )

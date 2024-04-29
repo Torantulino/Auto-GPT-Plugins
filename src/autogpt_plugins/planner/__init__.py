@@ -81,7 +81,7 @@ class PlannerPlugin(AutoGPTPluginTemplate):
         prompt.add_command(
             "mark_task_completed",
             "Updates the status of a task and marks it as completed",
-            {"task_id": "<int>"},
+            {"task_id": "integer"},
             update_task_status,
         )
 

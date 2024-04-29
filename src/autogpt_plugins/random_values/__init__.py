@@ -208,31 +208,31 @@ class AutoGPTRandomValues(AutoGPTPluginTemplate):
         prompt.add_command(  # type: ignore
             "rnd_num",
             "Random Numbers",
-            {"min": "<int>", "max": "<int>", "cnt": "<int>"},
+            {"min": "integer", "max": "integer", "cnt": "integer"},
             self.plugin_class.random_number,
         )
         prompt.add_command(  # type: ignore
             "uuids", 
             "Make UUIDs", 
-            {"cnt": "<int>"}, 
+            {"cnt": "integer"},
             self.plugin_class.make_uuids
         )
         prompt.add_command(  # type: ignore
             "make_str",
             "Generate Strings",
-            {"len": "<int>", "cnt": "<int>"},
+            {"len": "integer", "cnt": "integer"},
             self.plugin_class.generate_string,
         )
         prompt.add_command( # type: ignore
             "pwds",
             "Create Passwords",
-            {"len": "<int>", "cnt": "<int>"},
+            {"len": "integer", "cnt": "integer"},
             self.plugin_class.generate_password,
         )
         prompt.add_command( # type: ignore
             "lorem_ipsum",
             "Create Lorem Sentences",
-            {"cnt": "<int>"},
+            {"cnt": "integer"},
             self.plugin_class.generate_placeholder_text,
         )
         return prompt

@@ -207,7 +207,7 @@ class AutoGPTWikipediaSearch(AutoGPTPluginTemplate):
         prompt.add_command(
             "wikipedia_search",
             "Wikipedia search",
-            {"query": "<query>"},
+            {"query": "string"},
             _wikipedia_search,
         )
         return prompt
